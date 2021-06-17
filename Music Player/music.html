@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Music player</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='music.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+</head>
+
+<body>
+    <div class="nav_m">
+        <a href="#">Music</a>
+        <a href="#">PlayList</a>
+        <a href="#">Best</a>
+    </div>
+    <!-- player================================== -->
+    <div class="player">
+        <h3>Music Name</h3>
+        <img id="m_img" src="bg.jpg" >
+        
+
+        <div class="con_music">
+            <audio id="myAudio">
+                <source src="as_Cool.mp3" type="audio/mp3">
+            </audio>
+        </div>
+          
+        
+        <div class="slider_container">
+            <div id="current-time">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+            <div class="total-duration">00:00</div>
+        </div>
+
+        <div class="buttons">
+            <div class="backward"><i class="fas fa-backward fa-2x"></i></div>
+            <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+            <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+            <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+            <div class="forward"><i class="fas fa-forward fa-2x"></i></div>
+        </div>
+
+        <div class="slider_container">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+            <i class="fa fa-volume-up"></i>
+          </div>
+        <br><br>
+       
+
+    </div>
+</body>
+<script  type="text/javascript" src='music.js'></script>
+</html>
